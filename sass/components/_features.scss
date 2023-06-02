@@ -1,0 +1,80 @@
+.features {
+    @extend %section;
+
+    @media screen and(min-width:1200px) {
+        padding-bottom: 0;
+    }
+
+    &__list {
+        @extend %list;
+        @extend %container;
+        display: block;
+
+
+        @media screen and (min-width:768px) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        @media screen and (min-width:1200px) {
+            align-items: start;
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__item {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media screen and (min-width:768px) {
+            width: 354px;
+            margin-bottom: 0;
+        }
+
+        @media screen and (min-width:1200px) {
+            width: 270px;
+        }
+    }
+
+    &__icon-thumb {
+        display: flex;
+        background-color: $contentBackground;
+        border-radius: 4px;
+
+        height: 120px;
+        margin-bottom: 30px;
+    }
+
+    &__icon {
+        margin: auto;
+        width: 70px;
+        height: 70px;
+    }
+
+    &__title {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+
+        @media screen and (min-width:768px) {
+            text-align: left;
+        }
+    }
+
+    &__text {
+        margin-top: 0;
+        margin-bottom: 0;
+        color: $secondaryColor;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
+}

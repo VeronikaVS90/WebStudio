@@ -1,0 +1,60 @@
+.clients {
+    @extend %section;
+
+    &__title {
+        @extend %section-title;
+    }
+
+    &__list {
+        @extend %container;
+        @extend %list;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+
+        @media screen and (min-width:1200px) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__item {
+        width: 210px;
+
+        @media screen and (min-width: 768px) {
+            width: 226px;
+        }
+
+        @media screen and (min-width:1200px) {
+            width: 170px;
+        }
+    }
+
+    &__link {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        height: 92px;
+        color: $iconColor;
+        border: 1px solid;
+        border-radius: 4px;
+        transition: color 250ms $transitionCubic;
+
+        &:hover,
+        &:focus {
+            color: $accentColor;
+        }
+
+        @media screen and (min-width:1200px) {
+            width: 170px;
+        }
+    }
+
+    &__icon {
+        width: 106px;
+        height: 60px;
+        fill: currentColor;
+    }
+}

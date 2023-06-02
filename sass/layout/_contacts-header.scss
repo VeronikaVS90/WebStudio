@@ -1,0 +1,86 @@
+.contacts-header {
+    @extend %list;
+    margin-left: auto;
+    display: flex;
+
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+        flex-direction: column;
+    }
+
+    &__item {
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            margin-right: 50px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        text-decoration: none;
+        color: $secondaryColor;
+        letter-spacing: 0.02em;
+        align-items: center;
+
+        &:hover,
+        &:focus {
+            color: $accentColor;
+        }
+
+        @media screen and (min-width: 768px) and (max-width:1199px) {
+            display: flex;
+        }
+
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+    }
+
+    &__icon-mail {
+        width: 16px;
+        height: 12px;
+        fill: currentColor;
+        margin-right: 10px;
+        padding: 0;
+        margin-bottom: 0;
+
+        @media screen and (min-width: 768px) and (max-width:1199px) {
+            width: 14px;
+            height: 10px;
+            margin-right: 8px;
+        }
+    }
+
+        &__icon-tel {
+            width: 10px;
+            height: 16px;
+            fill: currentColor;
+            margin-right: 10px;
+            padding: 0;
+            margin-bottom: 0;
+    
+            @media screen and (min-width: 768px) and (max-width:1199px) {
+                width: 10px;
+                height: 14px;
+                margin-right: 8px;
+            }
+        }
+}

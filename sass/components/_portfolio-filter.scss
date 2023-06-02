@@ -1,0 +1,63 @@
+.card-section {
+    @extend %section;
+}
+
+.filter {
+    @extend %container;
+    margin-bottom: 40px;
+
+    @media screen and (min-width:768px) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
+
+
+    &__list {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+
+        padding: 0;
+        list-style: none;
+        gap: 8px;
+
+        @media screen and (min-width:768px) {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        margin-bottom: 15px;
+
+        @media screen and (min-width:768px) {
+            margin: 0;
+        }
+    }
+
+    &__button {
+        padding: 6px 22px;
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.62;
+        letter-spacing: 0.03em;
+        background-color: $buttonBackground;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: color 250ms $transitionCubic,
+            background-color 250ms $transitionCubic, box-shadow 250ms $transitionCubic;
+
+        &:hover,
+        &:focus {
+            color: $contrastColor;
+            background-color: $accentColor;
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+                0px 2px 2px rgba(0, 0, 0, 0.12);
+        }
+    }
+}

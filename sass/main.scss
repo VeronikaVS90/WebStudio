@@ -1,0 +1,24 @@
+@import './utils/variables';
+@import './utils/placeholders';
+
+@import './base/base';
+
+@import './layout/page-header';
+@import './layout/navigation';
+@import './layout/contacts-header';
+@import './layout/menu-container';
+@import './layout/page-footer';
+@import './layout/contacts-footer';
+@import './layout/join';
+@import './layout/subscription';
+@import './layout/modal';
+
+@import './components/logo';
+@import './components/hero';
+@import './components/features';
+@import './components/activity';
+@import './components/team';
+@import './components/icons';
+@import './components/clients';
+@import './components/portfolio-filter';
+@import './components/portfolio-cards';

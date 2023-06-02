@@ -1,0 +1,253 @@
+.backdrop {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms $transitionCubic;
+    overflow-y: scroll;
+
+    &--hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.modal {
+    position: absolute;
+    top: 93px;
+    left: 50%;
+    max-width: 450px;
+    width: 100%;
+    transform: translateX(-50%);
+    background-color: $primaryBackground;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 250ms $transitionCubic;
+
+    @media screen and (min-width:768px) {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media screen and (min-width:1200px) {
+        max-width: 528px;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .backdrop--hidden & {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: $primaryBackground;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    transition: fill 250ms $transitionCubic;
+
+    &__icon {
+        margin: auto;
+        width: 18px;
+        height: 18px;
+        right: 50%;
+        align-items: center;
+        cursor: pointer;
+
+        .close:hover &,
+        .close:focus & {
+            fill: $accentColor;
+        }
+    }
+}
+
+.form {
+    padding: 40px;
+
+    &__title {
+        display: block;
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.5;
+        letter-spacing: 0.03em;
+        margin-bottom: 12px;
+
+        @media screen and(min-width:1200px) {
+            line-height: 1.15;
+        }
+    }
+
+    &__field {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    &__label {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: $secondaryColor;
+        margin-bottom: 4px;
+    }
+
+    &__input {
+        height: 40px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        padding-left: 42px;
+        transition: border 250ms $transitionCubic;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid $accentColor;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        width: 18px;
+        height: 18px;
+
+        &:focus {
+            outline: none;
+            border: 1px solid $accentColor;
+        }
+
+        .form__input:focus+& {
+            fill: $accentColor;
+        }
+    }
+
+    &__comment {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__textarea {
+        width: 100%;
+        height: 120px;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        resize: none;
+        transition: border 250ms $transitionCubic;
+
+        &::placeholder {
+            color: rgba(117, 117, 117, 0.5);
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid $accentColor;
+        }
+    }
+
+    &__button {
+        display: block;
+        width: 200px;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        color: $contrastColor;
+        background: $accentColor;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 250ms $transitionCubic;
+
+        &:hover,
+        &:focus {
+            background: $buttonAccent;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    transition: transform 250ms $transitionCubic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: $secondaryColor;
+
+    @media screen and (min-width:1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+
+    &__input {
+        appearance: none;
+        margin-right: 12px;
+    }
+
+    &__label {
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        top: -2px;
+        left: 0;
+
+        transform: translate(-50%);
+        width: 16px;
+        height: 15px;
+        border: 2px solid $primaryСolor;
+        border-radius: 2px;
+        fill: $primaryBackground;
+
+        @media screen and (min-width:1200px) {
+            top: 4px;
+        }
+
+        .checkbox__input:checked+& {
+            background-color: $accentColor;
+            border-color: transparent;
+            background-image: url(../images/check.svg);
+        }
+    }
+
+    &__link {
+        color: $accentColor;
+        text-decoration-skip-ink: none;
+    }
+}

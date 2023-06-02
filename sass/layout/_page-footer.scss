@@ -1,0 +1,22 @@
+.page-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $secondaryBackground;
+
+    &__container {
+        @extend %container;
+        text-align: center;
+
+        @media screen and(min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: baseline;
+        }
+
+        @media screen and (min-width: 1200px) {
+            justify-content: space-between;
+            text-align: start;
+        }
+    }
+}

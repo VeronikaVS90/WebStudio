@@ -1,0 +1,58 @@
+.address {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 165px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        align-items: start;
+        justify-content: start;
+        margin-right: 70px;
+        margin-left: 0;
+    }
+
+    &__list {
+        padding-left: 0;
+        margin-top: 0;
+        margin-bottom: 60px;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        font-style: normal;
+        list-style: none;
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        color: $contrastColor;
+        text-decoration: none;
+        transition: color 250ms $transitionCubic;
+    }
+
+    &__contact {
+        display: inline-block;
+        color: $addressItemColor;
+        text-decoration: none;
+        transition: color 250ms $transitionCubic;
+        text-align: start;
+
+        &:hover,
+        &:focus {
+            color: $accentColor;
+        }
+    }
+
+    &__item {
+        margin-bottom: 12px;
+
+        &:last-child {
+                margin-bottom: 0;
+            }
+    }
+}
