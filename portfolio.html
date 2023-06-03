@@ -125,25 +125,27 @@
           <h1 class="visually-hidden">Наші проєкти</h1>
           <ul class="filter__list">
             <li class="filter__item">
-              <button type="button" class="filter__button">Усі</button>
+              <button type="button" class="filter__button" data-filter="all">Усі</button>
             </li>
             <li class="filter__item">
-              <button type="button" class="filter__button">Веб-сайти</button>
+              <button type="button" class="filter__button" data-filter="website">Веб-сайти</button>
             </li>
             <li class="filter__item">
-              <button type="button" class="filter__button">Додатки</button>
+              <button type="button" class="filter__button" data-filter="app">Додатки</button>
             </li>
             <li class="filter__item">
-              <button type="button" class="filter__button">Дизайн</button>
+              <button type="button" class="filter__button" data-filter="design">Дизайн</button>
             </li>
             <li class="filter__item">
-              <button type="button" class="filter__button">Маркетинг</button>
+              <button type="button" class="filter__button" data-filter="marketing">
+                Маркетинг
+              </button>
             </li>
           </ul>
         </div>
         <div class="cards">
           <ul class="cards__list">
-            <li class="cards__item">
+            <li class="cards__item" data-category="website">
               <a href="#" class="cards__link">
                 <div class="cards__thumb">
                   <picture>
@@ -183,7 +185,7 @@
                 </div>
               </a>
             </li>
-            <li class="cards__item">
+            <li class="cards__item" data-category="design">
               <a href="#" class="cards__link">
                 <div class="cards__thumb">
                   <picture>
@@ -225,7 +227,7 @@
                 </div>
               </a>
             </li>
-            <li class="cards__item">
+            <li class="cards__item" data-category="app">
               <a href="#" class="cards__link">
                 <div class="cards__thumb">
                   <picture>
@@ -267,7 +269,7 @@
                 </div>
               </a>
             </li>
-            <li class="cards__item">
+            <li class="cards__item" data-category="marketing">
               <a href="#" class="cards__link">
                 <div class="cards__thumb">
                   <picture>
@@ -307,7 +309,7 @@
                 </div>
               </a>
             </li>
-            <li class="cards__item">
+            <li class="cards__item" data-category="app">
               <a href="#" class="cards__link">
                 <div class="cards__thumb">
                   <picture>
@@ -349,7 +351,7 @@
                 </div>
               </a>
             </li>
-            <li class="cards__item">
+            <li class="cards__item" data-category="website">
               <a href="#" class="cards__link">
                 <div class="cards__thumb">
                   <picture>
@@ -391,7 +393,7 @@
                 </div>
               </a>
             </li>
-            <li class="cards__item">
+            <li class="cards__item" data-category="design">
               <a href="#" class="cards__link">
                 <div class="cards__thumb">
                   <picture>
@@ -433,7 +435,7 @@
                 </div>
               </a>
             </li>
-            <li class="cards__item">
+            <li class="cards__item" data-category="marketing">
               <a href="#" class="cards__link">
                 <div class="cards__thumb">
                   <picture>
@@ -473,7 +475,7 @@
                 </div>
               </a>
             </li>
-            <li class="cards__item">
+            <li class="cards__item" data-category="app">
               <a href="#" class="cards__link">
                 <div class="cards__thumb">
                   <picture>
@@ -607,5 +609,6 @@
       </div>
     </footer>
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/filter.js" type="module"></script>
   </body>
 </html>
