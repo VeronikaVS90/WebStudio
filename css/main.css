@@ -772,9 +772,6 @@ ul {
 .form__textarea::-moz-placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.form__textarea:-ms-input-placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
 .form__textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
@@ -1321,6 +1318,7 @@ ul {
   margin-bottom: 0;
   list-style: none;
   gap: 30px;
+  width: 100%;
 }
 .cards__item {
   width: 100%;
